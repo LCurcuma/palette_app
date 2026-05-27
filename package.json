@@ -1,0 +1,25 @@
+{
+  "name": "palette_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LCurcuma/palette_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/LCurcuma/palette_app/issues"
+  },
+  "homepage": "https://github.com/LCurcuma/palette_app#readme",
+  "devDependencies": {
+    "electron": "^42.3.0",
+    "electron-packager": "^17.1.2"
+  }
+}
