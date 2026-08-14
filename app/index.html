@@ -1,49 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palette randomizer</title>
-    <script src="https://kit.fontawesome.com/737b386bab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/737b386bab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav>
-            <a href="index_dark.html">
-                <i class="fa-regular fa-moon"></i>
-            </a>
+      <a href="index_dark.html">
+        <i class="fa-regular fa-moon"></i>
+      </a>
     </nav>
     <main>
-        <div id="settings">
-            <div id="colors_amount">
-                <input type="number" placeholder="Кол-во цветов"/>
-            </div>
-            <select id="color_mode" name="color_mode">
-                <option value="hex">HEX</option>
-                <option value="rgb">RGB</option>
-                <option value="cmyk">CMYK</option>
-                <option value="lab">Lab</option>
-            </select>
-        </div>
-        <div id="generated_colors">
-            <div id="color1"></div>
-            <div id="color2"></div>
-            <div id="color3"></div>
-            <div id="color4"></div>
-            <div id="color5"></div>
-            <div id="color6"></div>
-            <div id="color7"></div>
-            <div id="color8"></div>
-            <div id="color9"></div>
-            <div id="color10"></div>
-            <div id="color11"></div>
-            <div id="color12"></div>
-            <div id="color13"></div>
-            <div id="color14"></div>
-            <div id="color15"></div>
-            <div id="color16"></div>
-        </div>
+      <div class="settings">
+        <input type="number" placeholder="Кол-во цветов" id="color_amount" min="0" max="16" />
+        <select id="color_mode" name="color_mode">
+          <option value="hex">HEX</option>
+          <option value="rgb">RGB</option>
+          <option value="cmyk">CMYK</option>
+          <option value="lab">Lab</option>
+        </select>
+      </div>
+      <div id="generated_colors">
+        <div id="color1"></div>
+        <div id="color2"></div>
+        <div id="color3"></div>
+        <div id="color4"></div>
+        <div id="color5"></div>
+        <div id="color6"></div>
+        <div id="color7"></div>
+        <div id="color8"></div>
+        <div id="color9"></div>
+        <div id="color10"></div>
+        <div id="color11"></div>
+        <div id="color12"></div>
+        <div id="color13"></div>
+        <div id="color14"></div>
+        <div id="color15"></div>
+        <div id="color16"></div>
+      </div>
     </main>
     <footer></footer>
-</body>
+  </body>
 </html>
