@@ -11,3 +11,8 @@ nav{
     align-items: flex-end;
     padding: 10px 3vw;
 }
+
+.fa-moon{
+    color: #1E1E1E;
+    font-size: 24px;
+}
