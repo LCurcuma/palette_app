@@ -62,4 +62,21 @@ main{
     width: 22.3%;
     cursor: pointer;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.fa-unlock{
+    color: #F8EEEE;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.color_text{
+    color: #F8EEEE;
+    padding-bottom: 5px;
+    padding-right: 5px;
 }
