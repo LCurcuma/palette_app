@@ -30,3 +30,11 @@ main{
     grid-template-columns: auto auto;
     gap: 15px;
 }
+
+.select{
+    background-color: transparent;
+    color: #1E1E1E;
+    padding: 7px;
+    border-radius: 15px;
+    border: 2px solid #1E1E1E;
+}
