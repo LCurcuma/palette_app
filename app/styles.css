@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px 3vw;
+}
