@@ -4,24 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palette randomizer</title>
+    <script src="https://kit.fontawesome.com/737b386bab.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav>
-        <div id="modes"></div>
+        <div id="modes">
+            <a href=""><i class="fa-regular fa-moon" style="color: rgb(0, 0, 0);"></i></a>
+        </div>
     </nav>
     <main>
         <div id="settings">
             <div id="colors_amount">
-                <label>Напишите количество цветов</label>
-                <input type="number"/>
+                <input type="number" placeholder="Кол-во цветов"/>
             </div>
-            <div id="custom_colors">
-                <label></label>
-                <input/>
-            </div>
+            <select id="color_mode" name="color_mode">
+                <option value="hex">HEX</option>
+                <option value="rgb">RGB</option>
+                <option value="cmyk">CMYK</option>
+                <option value="lab">Lab</option>
+            </select>
         </div>
-        <div id="generated_colors"></div>
-        <div id="generate_save"></div>
+        <div id="generated_colors">
+            <div id="color1"></div>
+            <div id="color2"></div>
+            <div id="color3"></div>
+            <div id="color4"></div>
+            <div id="color5"></div>
+            <div id="color6"></div>
+            <div id="color7"></div>
+            <div id="color8"></div>
+            <div id="color9"></div>
+            <div id="color10"></div>
+            <div id="color11"></div>
+            <div id="color12"></div>
+            <div id="color13"></div>
+            <div id="color14"></div>
+            <div id="color15"></div>
+            <div id="color16"></div>
+        </div>
     </main>
     <footer></footer>
 </body>
