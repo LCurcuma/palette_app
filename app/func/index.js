@@ -5,7 +5,7 @@ let errorText = document.getElementById("error_text");
 
 colorsNumbersCont.addEventListener("input", () => {
   colorsNumbers = document.getElementById("color_amount").value;
-    if (colorsNumbers > 3 && colorsNumbers <= 16) {
+  if (colorsNumbers > 3 && colorsNumbers <= 16) {
     errorText.innerHTML = "";
     colors.innerHTML = "";
     for (i = 0; i < colorsNumbers; i++) {
@@ -30,6 +30,13 @@ colorsNumbersCont.addEventListener("input", () => {
 
     let error = document.createElement("p");
     error.innerText = "Значение не может быть меньше 4";
+    errorText.appendChild(error);
+  } else {
+    errorText.innerHTML = "";
+    colors.innerHTML = "";
+
+    let error = document.createElement("p");
+    error.innerText = "Значение не может быть больше 16";
     errorText.appendChild(error);
   }
 });
