@@ -6,6 +6,7 @@ let errorText = document.getElementById("error_text");
 let generateBTN = document.getElementById("generate");
 let colorTiles = document.getElementsByClassName("color");
 let amountOfColors = document.getElementsByClassName("color").length;
+let colorCodes = [];
 
 //number of the colors
 colorsNumbersCont.addEventListener("input", () => {
@@ -13,17 +14,18 @@ colorsNumbersCont.addEventListener("input", () => {
   if (colorsNumbers > 3 && colorsNumbers <= 16) {
     errorText.innerHTML = "";
     colors.innerHTML = "";
+    colorCodes = [];
     for (i = 0; i < colorsNumbers; i++) {
       let color = document.createElement("div");
       let colorLock = document.createElement("i");
       let colorText = document.createElement("p");
+      let r = getRandomColor();
+      let g = getRandomColor();
+      let b = getRandomColor();
 
       color.classList.add("color");
       color.setAttribute("id", "color" + i);
-      color.setAttribute(
-        "style",
-        `background: rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()});`,
-      );
+      color.setAttribute("style", `background: rgb(${r}, ${g}, ${b});;`);
       colorLock.classList.add("fa-solid");
       colorLock.classList.add("fa-unlock");
       colorText.classList.add("color_text");
@@ -32,12 +34,14 @@ colorsNumbersCont.addEventListener("input", () => {
       colors.appendChild(color);
       color.appendChild(colorLock);
       color.appendChild(colorText);
+      colorCodes.push({ red: r, green: g, blue: b });
     }
 
     amountOfColors = document.getElementsByClassName("color").length;
   } else if (colorsNumbers <= 3) {
     errorText.innerHTML = "";
     colors.innerHTML = "";
+    colorCodes = [];
 
     let error = document.createElement("p");
     error.innerText = "Значение не может быть меньше 4";
@@ -46,6 +50,7 @@ colorsNumbersCont.addEventListener("input", () => {
   } else {
     errorText.innerHTML = "";
     colors.innerHTML = "";
+    colorCodes = [];
 
     let error = document.createElement("p");
     error.innerText = "Значение не может быть больше 16";
@@ -58,17 +63,18 @@ colorsNumbersCont.addEventListener("input", () => {
 generateBTN.addEventListener("click", () => {
   errorText.innerHTML = "";
   colors.innerHTML = "";
+  colorCodes = [];
   for (i = 0; i < amountOfColors; i++) {
     let color = document.createElement("div");
     let colorLock = document.createElement("i");
     let colorText = document.createElement("p");
+    let r = getRandomColor();
+    let g = getRandomColor();
+    let b = getRandomColor();
 
     color.classList.add("color");
     color.setAttribute("id", "color" + i);
-    color.setAttribute(
-      "style",
-      `background: rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()});`,
-    );
+    color.setAttribute("style", `background: rgb(${r}, ${g}, ${b});`);
     colorLock.classList.add("fa-solid");
     colorLock.classList.add("fa-unlock");
     colorText.classList.add("color_text");
@@ -77,6 +83,7 @@ generateBTN.addEventListener("click", () => {
     colors.appendChild(color);
     color.appendChild(colorLock);
     color.appendChild(colorText);
+    colorCodes.push({ red: r, green: g, blue: b });
   }
 });
 
