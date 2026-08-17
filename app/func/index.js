@@ -22,15 +22,17 @@ colorsNumbersCont.addEventListener("input", () => {
       let r = getRandomColor();
       let g = getRandomColor();
       let b = getRandomColor();
-    let HEX = rgbToHex((r = r), (g = g), (b = b));
+      let HEX = rgbToHex((r = r), (g = g), (b = b));
 
       color.classList.add("color");
       color.setAttribute("id", "color" + i);
       color.setAttribute("style", `background: rgb(${r}, ${g}, ${b});;`);
       colorLock.classList.add("fa-solid");
       colorLock.classList.add("fa-unlock");
+      colorLock.setAttribute("id", "lock" + i);
       colorText.classList.add("color_text");
       colorText.innerText = HEX;
+      colorText.setAttribute("id", "code" + i);
 
       colors.appendChild(color);
       color.appendChild(colorLock);
@@ -72,15 +74,17 @@ generateBTN.addEventListener("click", () => {
     let r = getRandomColor();
     let g = getRandomColor();
     let b = getRandomColor();
-    let HEX = rgbToHex(r = r, g = g, b = b);
+    let HEX = rgbToHex((r = r), (g = g), (b = b));
 
     color.classList.add("color");
     color.setAttribute("id", "color" + i);
     color.setAttribute("style", `background: rgb(${r}, ${g}, ${b});`);
     colorLock.classList.add("fa-solid");
     colorLock.classList.add("fa-unlock");
+    colorLock.setAttribute("id", "lock" + i);
     colorText.classList.add("color_text");
     colorText.innerText = HEX;
+    colorText.setAttribute("id", "code" + i);
 
     colors.appendChild(color);
     color.appendChild(colorLock);
