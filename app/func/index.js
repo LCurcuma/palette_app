@@ -7,6 +7,7 @@ let generateBTN = document.getElementById("generate");
 let colorTiles = document.getElementsByClassName("color");
 let amountOfColors = document.getElementsByClassName("color").length;
 let colorCodes = [];
+let locked = [];
 
 //number of the colors
 colorsNumbersCont.addEventListener("input", () => {
@@ -30,6 +31,7 @@ colorsNumbersCont.addEventListener("input", () => {
       colorLock.classList.add("fa-solid");
       colorLock.classList.add("fa-unlock");
       colorLock.setAttribute("id", "lock" + i);
+      colorLock.setAttribute("onclick", `setLock("color${i}")`);
       colorText.classList.add("color_text");
       colorText.innerText = HEX;
       colorText.setAttribute("id", "code" + i);
@@ -82,6 +84,7 @@ generateBTN.addEventListener("click", () => {
     colorLock.classList.add("fa-solid");
     colorLock.classList.add("fa-unlock");
     colorLock.setAttribute("id", "lock" + i);
+    colorLock.setAttribute("onclick", setLock("color${i}"));
     colorText.classList.add("color_text");
     colorText.innerText = HEX;
     colorText.setAttribute("id", "code" + i);
@@ -111,4 +114,17 @@ function componentToHex(c) {
 
 function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+//locking function
+function setLock(id) {
+  const index = locked.indexOf(id);
+
+  if (index === -1) {
+    locked.push(id);
+  } else {
+    locked.splice(index, 1);
+  }
+
+  console.log(locked);
 }
