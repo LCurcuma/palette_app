@@ -22,6 +22,7 @@ colorsNumbersCont.addEventListener("input", () => {
       let r = getRandomColor();
       let g = getRandomColor();
       let b = getRandomColor();
+    let HEX = rgbToHex((r = r), (g = g), (b = b));
 
       color.classList.add("color");
       color.setAttribute("id", "color" + i);
@@ -29,7 +30,7 @@ colorsNumbersCont.addEventListener("input", () => {
       colorLock.classList.add("fa-solid");
       colorLock.classList.add("fa-unlock");
       colorText.classList.add("color_text");
-      colorText.innerText = "#000000";
+      colorText.innerText = HEX;
 
       colors.appendChild(color);
       color.appendChild(colorLock);
@@ -71,6 +72,7 @@ generateBTN.addEventListener("click", () => {
     let r = getRandomColor();
     let g = getRandomColor();
     let b = getRandomColor();
+    let HEX = rgbToHex(r = r, g = g, b = b);
 
     color.classList.add("color");
     color.setAttribute("id", "color" + i);
@@ -78,7 +80,7 @@ generateBTN.addEventListener("click", () => {
     colorLock.classList.add("fa-solid");
     colorLock.classList.add("fa-unlock");
     colorText.classList.add("color_text");
-    colorText.innerText = "#000000";
+    colorText.innerText = HEX;
 
     colors.appendChild(color);
     color.appendChild(colorLock);
@@ -90,4 +92,19 @@ generateBTN.addEventListener("click", () => {
 function getRandomColor() {
   let number = Math.floor(Math.random() * 255);
   return number;
+}
+
+//rgb to HEX converter
+// Source - https://stackoverflow.com/a/5624139
+// Posted by Tim Down, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-08-17, License - CC BY-SA 4.0
+//yes-yes, took it from stackoverflow
+
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
